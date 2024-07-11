@@ -1,5 +1,8 @@
 package src;
-
+/**
+ * Thanawat Potidet
+ * 6510450445
+ * */
 class HasQuarterState implements State {
 
     @Override

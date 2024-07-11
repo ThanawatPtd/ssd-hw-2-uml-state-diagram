@@ -1,5 +1,8 @@
 package src;
-
+/**
+ * Thanawat Potidet
+ * 6510450445
+ * */
 class SoldState implements State {
 
     @Override

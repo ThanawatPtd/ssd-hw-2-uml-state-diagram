@@ -1,4 +1,8 @@
 package src;
+/**
+ * Thanawat Potidet
+ * 6510450445
+ * */
 
 public class GumballMachine {
   private int inventory;

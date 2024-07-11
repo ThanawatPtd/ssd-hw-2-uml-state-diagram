@@ -1,5 +1,8 @@
 package src;
-
+/**
+ * Thanawat Potidet
+ * 6510450445
+ * */
 public class NoQuarterState implements State{
 
     public void insertQuarter(GumballMachine gm) {
