@@ -39,4 +39,5 @@ public class WinnerState implements State {
   public void insertQuarter(GumballMachine gm) {
     System.out.println("Please wait, we're already giving you a gumball");
   }
+
 }
