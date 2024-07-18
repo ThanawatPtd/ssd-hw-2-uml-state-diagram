@@ -1,8 +1,10 @@
 package src;
 
 /**
- * WinnerState
- */
+ * Thanawat Potidet
+ * 6510450445
+ * */
+
 public class WinnerState implements State {
   @Override
   public void turnCrank(GumballMachine gm) {
