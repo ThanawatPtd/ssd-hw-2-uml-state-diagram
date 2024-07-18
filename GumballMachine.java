@@ -7,10 +7,11 @@ package src;
 public class GumballMachine {
   private int inventory;
   private State state;
-
+  private String flavor;
   public GumballMachine(int inventory){
     this.inventory = inventory;
     this.state = new NoQuarterState();
+    this.flavor = "";
   }
 
   public void insertQuarter(){
@@ -25,6 +26,10 @@ public class GumballMachine {
   }
   public void dispenseGumball(){
     this.state.dispense(this);
+  }
+
+  public void choose(String flavor){
+   this.flavor = flavor;
   }
 
   public String toString(){
@@ -54,7 +59,7 @@ public class GumballMachine {
   }
 
   public void releaseBall() {
-    System.out.println("A gumball comes rolling out the slot...");
+    System.out.printf("A %s gumball comes rolling out the slot...\n", flavor);
     if (inventory != 0) {
       setInventory(this.inventory - 1);
     }
@@ -68,5 +73,7 @@ public class GumballMachine {
     return this.inventory;
   }
 
-
+  public String getFlavor() {
+    return flavor;
+  }
 }

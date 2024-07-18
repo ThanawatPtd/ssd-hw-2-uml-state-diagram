@@ -1,5 +1,6 @@
 package src;
 
+import java.util.Objects;
 import java.util.Random;
 
 /**
@@ -22,17 +23,21 @@ class HasQuarterState implements State {
 
   @Override
   public void turnCrank(GumballMachine gm) {
-    System.out.println("You turned...");
-    int winner = randomWinner.nextInt(10);
-    if ((winner == 0) && (gm.getInventory() > 1)) {
-      gm.setState(new WinnerState());
+    if (Objects.equals(gm.getFlavor(), "")) {
+      System.out.println("You have to choose a flavor first");
     } else {
-      gm.setState(new SoldState());
+      System.out.println("You turned...");
+      int winner = randomWinner.nextInt(10);
+      if ((winner == 0) && (gm.getInventory() > 1)) {
+        gm.setState(new WinnerState());
+      } else {
+        gm.setState(new SoldState());
+      }
     }
   }
 
   @Override
   public void dispense(GumballMachine gm) {
-    System.out.println("Please turn crank");
+    System.out.println("No gumball dispensed");
   }
 }

@@ -37,18 +37,26 @@ public class Main {
 
 //    System.out.println(gumballMachine);
 
-    GumballMachine gMachine = new GumballMachine(5);
 
-    System.out.println(gMachine);
+    // Change Request 1
+//    GumballMachine gMachine = new GumballMachine(5);
+//
+//    System.out.println(gMachine);
+//
+//    gMachine.insertQuarter();
+//    gMachine.turnCrank();
+//
+//    System.out.println(gMachine);
+//
+//    gMachine.insertQuarter();
+//    gMachine.turnCrank();
+//    gMachine.insertQuarter();
+//    gMachine.turnCrank();
 
-    gMachine.insertQuarter();
-    gMachine.turnCrank();
-
-    System.out.println(gMachine);
-
-    gMachine.insertQuarter();
-    gMachine.turnCrank();
-    gMachine.insertQuarter();
-    gMachine.turnCrank();
+    //Change Request 2
+    gumballMachine.insertQuarter();
+    gumballMachine.choose("Mango");
+    gumballMachine.choose("Orange");
+    gumballMachine.turnCrank();
   }
 }
