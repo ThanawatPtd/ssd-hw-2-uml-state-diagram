@@ -21,12 +21,14 @@ public class GumballMachine {
   }
   public void turnCrank(){
     this.state.turnCrank(this);
+    this.state.dispense(this);
   }
   public void dispenseGumball(){
     this.state.dispense(this);
   }
 
-  public void startMessage(){
+  public String toString(){
+    System.out.println();
     System.out.println("Mighty Gumball, Inc.");
     System.out.println("Java-enabled Standing Gumball Model #2004");
     int flag = this.inventory > 1 ? 1 : 0;
@@ -34,13 +36,13 @@ public class GumballMachine {
         case 0:
           System.out.println("Inventory : " + this.inventory + " gumball");
           System.out.println("Machine is sold out");
-          return;
+          return null;
         case 1:
           System.out.println("Inventory : " + this.inventory + " gumballs");
           break;
       }
     System.out.println("Machine is waiting for a quarter");
-    System.out.println();
+    return "";
   }
 
   private void decreaseInventory(){
@@ -53,7 +55,6 @@ public class GumballMachine {
 
   public void releaseBall() {
     System.out.println("A gumball comes rolling out the slot...");
-    System.out.println();
     if (inventory != 0) {
       setInventory(this.inventory - 1);
     }
@@ -66,4 +67,6 @@ public class GumballMachine {
   public int getInventory() {
     return this.inventory;
   }
+
+
 }
